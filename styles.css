@@ -269,13 +269,12 @@ address { font-style: normal; }
   justify-content: space-between;
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 var(--pad);
+ padding: 0 20px; /* was: var(--pad) — missing the 0 for top/bottom */
 }
-
 /* SVG logo — no background, no box, just the mark */
 .nav-logo {
   display: flex;
-  align-items: center;
+  align-items: start;
   text-decoration: none;
   flex-shrink: 0;
 }
@@ -335,7 +334,7 @@ address { font-style: normal; }
    min-height to absorb text length variance.
 ═══════════════════════════════════════ */
 .hero {
-  padding: var(--pad) var(--section-v);
+  padding: var(--section-v) var(--pad);
   background: var(--gray-1);
   position: relative;
   overflow: hidden;
@@ -1060,7 +1059,7 @@ address { font-style: normal; }
 @media (max-width: 960px) {
   :root { --pad: clamp(16px, 3.5vw, 36px); }
 
-  .hero          { padding:  var(--pad) 3rem; }
+  .hero         { padding: 3rem var(--pad); } 
   .hero-grid     { grid-template-columns: 1fr; gap: 2rem; align-items: start; }
   .hero-right    { position: static; }
   .stats-card    { max-width: 520px; }
@@ -1090,7 +1089,7 @@ address { font-style: normal; }
   .nav-links { display: none; }
   .nav-ham   { display: flex; }
 
-  .hero        { padding:  var(--pad) 3.5rem; }
+  .hero        { padding: 3.5rem var(--pad); } 
   .hero h1     { font-size: clamp(26px, 5vw, 40px); }
   .hero-h1-wrap { min-height: clamp(130px, 25vw, 200px); }
   .hero-ctas   { flex-direction: column; align-items: flex-start; }
@@ -1131,7 +1130,7 @@ address { font-style: normal; }
   :root { --pad: 18px; --nav-h: 62px; }
 
   .nav-logo-img { height: 28px; }
-  .hero         { padding:  var(--pad) 3rem; }
+  .hero         { padding: 3rem var(--pad); }  
   .hero-eyebrow { font-size: 11px; }
   .hero h1      { font-size: clamp(24px, 7vw, 34px); }
   .hero-h1-wrap { min-height: clamp(160px, 40vw, 240px); }
