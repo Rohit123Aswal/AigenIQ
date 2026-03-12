@@ -5,27 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!--
-    CONTENT SECURITY POLICY (defence-in-depth meta fallback)
-    ─────────────────────────────────────────────────────────
-    PRIMARY enforcement should be your HTTP response header.
-    Example for Nginx:
-
-      add_header Content-Security-Policy
-        "default-src 'self';
-         style-src   'self';
-         script-src  'self';
-         img-src     'self' data:;
-         font-src    'self';
-         connect-src 'none';
-         object-src  'none';
-         base-uri    'self';
-         form-action 'self';"
-        always;
-
-    Note: once CSS/JS are in separate files (as here), you can
-    drop 'unsafe-inline' — use a nonce or hash instead if needed.
-  -->
   <meta http-equiv="Content-Security-Policy"
         content="default-src 'self';
                  style-src  'self';
@@ -37,12 +16,10 @@
                  base-uri   'self';
                  form-action 'self';">
 
-  <!-- Recommend setting these as HTTP response headers too -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="Referrer-Policy"        content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy"     content="camera=(), microphone=(), geolocation=()">
 
-  <!-- ── Primary SEO ── -->
   <title>AiGENiQ — Making AI Adoption Stick | AI Consultancy Manchester</title>
   <meta name="description"
         content="AiGENiQ helps UK business leaders build AI into their operations properly — leadership aligned, teams actually using it, automation that earns its place. Based in Manchester.">
@@ -52,7 +29,6 @@
   <meta name="robots"  content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://www.aigeniq.ai/">
 
-  <!-- ── Open Graph (Facebook / LinkedIn) ── -->
   <meta property="og:type"         content="website">
   <meta property="og:url"          content="https://www.aigeniq.ai/">
   <meta property="og:title"        content="AiGENiQ — Making AI Adoption Stick">
@@ -64,7 +40,6 @@
   <meta property="og:locale"       content="en_GB">
   <meta property="og:site_name"    content="AiGENiQ">
 
-  <!-- ── Twitter / X Card ── -->
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:site"        content="@aigeniq">
   <meta name="twitter:title"       content="AiGENiQ — Making AI Adoption Stick">
@@ -72,7 +47,6 @@
   <meta name="twitter:image"       content="https://www.aigeniq.ai/images/og-image.jpg">
   <meta name="twitter:image:alt"   content="AiGENiQ — Making AI Adoption Stick">
 
-  <!-- ── Favicons ── -->
   <link rel="icon"             type="image/x-icon"            href="/favicon.ico">
   <link rel="icon"             type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon"             type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -81,10 +55,8 @@
   <meta name="theme-color"             content="#A7F432">
   <meta name="msapplication-TileColor" content="#0A0A0A">
 
-  <!-- ── Stylesheet ── -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- ── Structured Data (JSON-LD) ── -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -96,74 +68,17 @@
         "url": "https://www.aigeniq.ai",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.aigeniq.ai/images/logo.png",
+          "url": "https://www.aigeniq.ai/Logo.svg",
           "width": 200,
           "height": 60
         },
-        "description": "AiGENiQ helps UK business leaders build AI into their operations properly — leadership aligned, teams actually using it, and automation that earns its place.",
+        "description": "AiGENiQ helps UK business leaders build AI into their operations properly.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Colony, Jactin House, 24 Hood St, Ancoats",
           "addressLocality": "Manchester",
           "postalCode": "M4 6WX",
           "addressCountry": "GB"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+441618706424",
-          "email": "hello@aigeniq.ai",
-          "contactType": "customer service",
-          "areaServed": "GB",
-          "availableLanguage": "English"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/company/aigeniq",
-          "https://www.youtube.com/@aigeniq",
-          "https://www.instagram.com/aigeniq"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.aigeniq.ai/#website",
-        "url": "https://www.aigeniq.ai",
-        "name": "AiGENiQ",
-        "description": "Making AI Adoption Stick",
-        "publisher": { "@id": "https://www.aigeniq.ai/#organization" },
-        "inLanguage": "en-GB"
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://www.aigeniq.ai/#webpage",
-        "url": "https://www.aigeniq.ai",
-        "name": "AiGENiQ — Making AI Adoption Stick | AI Consultancy Manchester",
-        "isPartOf": { "@id": "https://www.aigeniq.ai/#website" },
-        "about": { "@id": "https://www.aigeniq.ai/#organization" },
-        "description": "AiGENiQ helps UK business leaders build AI into their operations properly.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.aigeniq.ai/"
-          }]
-        }
-      },
-      {
-        "@type": "Service",
-        "serviceType": "AI Consultancy",
-        "provider": { "@id": "https://www.aigeniq.ai/#organization" },
-        "name": "AI Strategy & Implementation",
-        "description": "We help business leaders build AI into their operations — from initial assessment and strategy through to full implementation and team adoption.",
-        "areaServed": { "@type": "Country", "name": "United Kingdom" },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "AI Services",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Assessment" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Roadmap Planning" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Implementation" } }
-          ]
         }
       }
     ]
@@ -172,14 +87,14 @@
 </head>
 <body>
 
-
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+  <!-- BANNER — compact pill style -->
   <div class="banner" role="note" aria-label="Site announcement">
     Wherever you are with AI — curious, stuck, or ready to move —&nbsp;<a href="#cta">book a 25-minute clarity call</a>
   </div>
 
-
+  <!-- MOBILE NAV DRAWER -->
   <nav class="mob-nav"
        id="mobile-nav"
        aria-label="Mobile navigation"
@@ -197,22 +112,24 @@
         <line x1="6"  y1="6"  x2="18" y2="18"/>
       </svg>
     </button>
-    <a href="#who-its-for">About Us</a>
     <a href="#why-aigeniq">Benefits</a>
+    <a href="#resources">Resources</a>
     <a href="#proof">Case Studies</a>
-    <a href="#how-we-work">How We Work</a>
-    <a href="#cta" class="mob-cta-link" id="mob-cta">Book a Clarity Call</a>
+    <a href="#insights">Insights</a>
+    <a href="#who-its-for">About</a>
+    <a href="#cta" class="mob-cta-link" id="mob-cta">BOOK A CALL</a>
   </nav>
   <div class="mob-overlay" id="mob-overlay" aria-hidden="true"></div>
 
-
+  <!-- PRIMARY NAV -->
   <header>
     <nav class="nav" id="nav" aria-label="Primary navigation">
       <div class="nav-inner">
+        <!-- SVG Logo — no background, transparent -->
         <a href="/" class="nav-logo" aria-label="AiGENiQ — Home">
-          <!-- Spec v5 locked: font-size 26px · font-weight 700 · letter-spacing -0.03em -->
-          Ai<span>GEN</span>iQ
+          <img src="Logo.svg" alt="AiGENiQ" class="nav-logo-img" width="120" height="34">
         </a>
+
         <button class="nav-ham"
                 id="nav-ham"
                 type="button"
@@ -227,50 +144,56 @@
             <line x1="3"  y1="18" x2="21" y2="18"/>
           </svg>
         </button>
+
         <div class="nav-links">
-          <a href="#who-its-for">About Us</a>
           <a href="#why-aigeniq">Benefits</a>
+          <a href="#resources">Resources</a>
           <a href="#proof">Case Studies</a>
-          <a href="#how-we-work">How We Work</a>
-          <a href="#cta" class="nav-btn">Book a Clarity Call</a>
+          <a href="#insights">Insights</a>
+          <a href="#who-its-for">About</a>
+          <a href="#cta" class="nav-btn">BOOK A CALL</a>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- ══════════════════════════════════════
-       MAIN CONTENT
-  ══════════════════════════════════════ -->
+  <!-- MAIN CONTENT -->
   <main id="main-content">
 
-    <!-- ── HERO ── -->
+    <!-- HERO -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="hero-grid">
-        <div>
+
+        <!-- LEFT: text content — fixed height prevents layout shift -->
+        <div class="hero-left">
           <div class="hero-eyebrow" data-reveal aria-hidden="true">
             <span class="eyebrow-dot"></span>What We Do
           </div>
-          <!-- aria-live so screen readers announce carousel changes -->
-          <h1 id="hero-heading"
-              data-reveal data-delay="1"
-              aria-live="polite" aria-atomic="true">
-            <span class="hero-msg active">You know AI matters. You just haven't had time to figure out what to do about it.</span>
-            <span class="hero-msg">Get your business AI-ready before your competitors do.</span>
-            <span class="hero-msg">Leadership aligned. Teams actually using it. Automation that earns its place.</span>
-            <span class="hero-msg">Starting with clarity, not code.</span>
-          </h1>
+
+          <!-- Outer wrapper: fixed min-height so stats card never moves -->
+          <div class="hero-h1-wrap">
+            <h1 id="hero-heading"
+                data-reveal data-delay="1"
+                aria-live="polite" aria-atomic="true">
+              <span class="hero-msg active">You know AI matters — you just haven’t had time to act on it.</span>
+              <span class="hero-msg">Get your business AI-ready before your competitors do.</span>
+              <span class="hero-msg">Leadership aligned. Teams actually using it. Automation that earns its place.</span>
+              <span class="hero-msg">Starting with clarity, not code.</span>
+            </h1>
+          </div>
+
           <p class="hero-sub" data-reveal data-delay="2">
             We help business leaders build AI into their operations properly — leadership aligned,
             teams actually using it, and automation that earns its place. Starting with clarity, not code.
           </p>
           <div class="hero-ctas" data-reveal data-delay="3">
             <a href="#cta" class="btn-dark">Book a Clarity Call</a>
-            <a href="#how-we-work" class="btn-ghost">See How We Work</a>
+            <a href="#how-we-work" class="btn-ghost">See How We Work &rarr;</a>
           </div>
         </div>
 
-        <!-- STATS CARD -->
-        <div data-reveal="right">
+        <!-- RIGHT: stats card — completely isolated, never shifts -->
+        <div class="hero-right" data-reveal="right">
           <article class="stats-card"
                    aria-label="Client result: 70% reduction in listing time for UK automotive dealership">
             <div class="sc-header">
@@ -322,10 +245,11 @@
             </footer>
           </article>
         </div>
+
       </div>
     </section>
 
-    <!-- ── AUDIENCE ── -->
+    <!-- AUDIENCE -->
     <section class="audience" id="who-its-for" aria-labelledby="audience-heading">
       <div class="container">
         <div class="audience-head" data-reveal>
@@ -336,7 +260,7 @@
         <div class="audience-grid">
 
           <article class="aud-card" tabindex="0" data-reveal data-delay="1"
-                   aria-label="01 — Not sure where AI fits yet. Activate to learn more.">
+                   aria-label="01 — Curious But Cautious. Activate to learn more.">
             <span class="aud-num" aria-hidden="true">01</span>
             <div class="aud-img">
               <img src="curious-but-cautious.jpg"
@@ -357,7 +281,7 @@
           </article>
 
           <article class="aud-card" tabindex="0" data-reveal data-delay="2"
-                   aria-label="02 — Clear on the problem, not the path. Activate to learn more.">
+                   aria-label="02 — Clear On The Problem, Unclear On The Path. Activate to learn more.">
             <span class="aud-num" aria-hidden="true">02</span>
             <div class="aud-img">
               <img src="clear-on-path.jpg"
@@ -378,7 +302,7 @@
           </article>
 
           <article class="aud-card" tabindex="0" data-reveal data-delay="3"
-                   aria-label="03 — Ready to implement properly. Activate to learn more.">
+                   aria-label="03 — Ready To Implement. Activate to learn more.">
             <span class="aud-num" aria-hidden="true">03</span>
             <div class="aud-img">
               <img src="ready-to-implement.jpg"
@@ -402,7 +326,7 @@
       </div>
     </section>
 
-    <!-- ── PROOF ── -->
+    <!-- PROOF -->
     <section class="proof" id="proof" aria-labelledby="proof-quote">
       <div class="container">
         <div class="proof-grid" data-reveal>
@@ -434,7 +358,7 @@
       </div>
     </section>
 
-    <!-- ── HOW WE WORK ── -->
+    <!-- HOW WE WORK -->
     <section class="hww" id="how-we-work" aria-labelledby="hww-heading">
       <div class="container">
         <div class="hww-head" data-reveal>
@@ -454,7 +378,7 @@
             </div>
             <div class="hww-hover" aria-hidden="true">
               <h4>Assess</h4>
-              <p>We spend time understanding your operations before we say a word about tools. We interview your team, map your workflows, and identify where AI would genuinely help versus where it would just add noise. You get a clear picture of what's worth building — and what isn't.</p>
+              <p>We spend time understanding your operations before we say a word about tools. We interview your team, map your workflows, and identify where AI would genuinely help versus where it would just add noise.</p>
             </div>
           </article>
 
@@ -468,7 +392,7 @@
             </div>
             <div class="hww-hover" aria-hidden="true">
               <h4>Plan</h4>
-              <p>We don't just hand you a list of AI tools. We create a structured roadmap that sequences the right work in the right order — quick wins first, then the bigger changes. Every decision is justified with logic, not enthusiasm for technology.</p>
+              <p>We don't just hand you a list of AI tools. We create a structured roadmap that sequences the right work in the right order — quick wins first, then the bigger changes.</p>
             </div>
           </article>
 
@@ -482,7 +406,7 @@
             </div>
             <div class="hww-hover" aria-hidden="true">
               <h4>Implement</h4>
-              <p>We build everything inside your own environment — no lock-in, no black boxes. Your team is trained through the build, not after it. We measure adoption, not delivery. The engagement ends when the change is embedded, not when we've handed over a document.</p>
+              <p>We build everything inside your own environment — no lock-in, no black boxes. Your team is trained through the build, not after it. We measure adoption, not delivery.</p>
             </div>
           </article>
 
@@ -492,7 +416,7 @@
       </div>
     </section>
 
-    <!-- ── WHY AIGENIQ ── -->
+    <!-- WHY AIGENIQ -->
     <section class="why" id="why-aigeniq" aria-labelledby="why-heading">
       <div class="container">
         <div class="why-head" data-reveal>
@@ -526,13 +450,12 @@
       </div>
     </section>
 
-    <!-- ── CTA STRIP ── -->
+    <!-- CTA STRIP -->
     <section class="cta-strip" id="cta" aria-labelledby="cta-heading">
       <div class="cta-inner" data-reveal>
         <h2 id="cta-heading">The hardest part is usually just starting the conversation.</h2>
         <p class="cta-sub">Book a 25-minute call. No pitch. No agenda beyond understanding where you are.</p>
         <p class="cta-honest">If we can't help, we'll tell you.</p>
-        <!-- Replace href with your actual booking URL (e.g. Calendly) -->
         <a href="https://calendly.com/aigeniq/clarity-call"
            class="btn-cta"
            rel="noopener noreferrer">
@@ -543,15 +466,13 @@
 
   </main>
 
-  <!-- ══════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-top">
         <div>
           <a href="/" class="foot-logo" aria-label="AiGENiQ — Home">
-            Ai<span>GEN</span>iQ
+        <img src="Footer-logo.svg" alt="AiGENiQ" class="nav-logo-img" width="120" height="34">
           </a>
           <p class="foot-tagline">Making AI adoption stick.</p>
           <address class="foot-addr">
@@ -562,7 +483,7 @@
         </div>
         <nav class="foot-col" aria-label="Sitemap">
           <h4>Sitemap</h4>
-          <a href="#who-its-for">About Us</a>
+          <a href="#who-its-for">About</a>
           <a href="#why-aigeniq">Benefits</a>
           <a href="#proof">Case Studies</a>
           <a href="#how-we-work">How We Work</a>
@@ -597,6 +518,5 @@
   </footer>
 
   <script src="main.js"></script>
-
 </body>
 </html>
