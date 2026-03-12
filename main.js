@@ -401,4 +401,16 @@
     });
   }
 
+
+  /* ══════════════════════════════════════
+     LOGO — RELOAD ON CLICK
+  ══════════════════════════════════════ */
+  var logoLinks = doc.querySelectorAll('.nav-logo, .foot-logo');
+  logoLinks.forEach(function (logo) {
+    logo.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.location.reload();
+    });
+  });
+
 }());
